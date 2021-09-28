@@ -1,14 +1,6 @@
-#include <unistd.h>
+#include "libft.h"
+
 int	ft_isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-	{
-		return (1);
-	}
-	return (0);
-}
-
-int	main(void)
-{
-	write(1, '\n', 1);
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }

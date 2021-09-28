@@ -4,12 +4,13 @@ int	ft_atoi(const char *str)
 {
 	long	i;
 	long	nbr;
-	int	isneg;
+	int		isneg;
 
 	i = 0;
 	nbr = 0;
 	isneg = 0;
-	while (str[i] != '\0' && (str[i] == 32 || str[i] == '\t' || str[i] == '\n' || str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
+	while (str[i] != '\0' && (str[i] == 32 || str[i] == '\t' || str[i] == '\n'
+			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
 		i++;
 	if (str[i] != '\0' && str[i] == '-')
 	{
