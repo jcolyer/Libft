@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jcolyer <jcolyer@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/10 13:31:47 by jcolyer           #+#    #+#             */
+/*   Updated: 2021/11/10 14:13:07 by jcolyer          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-        if (!s)
-                return ;
-        write(fd, s, ft_strlen(s));
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

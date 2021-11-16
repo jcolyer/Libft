@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jcolyer <jcolyer@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/10 13:19:15 by jcolyer           #+#    #+#             */
+/*   Updated: 2021/11/10 13:50:17 by jcolyer          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_estim(long n)
@@ -59,7 +71,7 @@ char	*ft_itoa(int n)
 	len = ft_estim(nbr);
 	rtn = 0;
 	isneg = 0;
-	if (rtn = ft_gen(rtn, nbr, len, isneg))
+	if (rtn == ft_gen(rtn, nbr, len, isneg))
 		return (0);
 	return (rtn);
 }

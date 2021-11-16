@@ -1,21 +1,23 @@
-int	ft_strlen(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jcolyer <jcolyer@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/10 16:25:19 by jcolyer           #+#    #+#             */
+/*   Updated: 2021/11/10 16:26:53 by jcolyer          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
-	while (str[i])
-	{
+	while (s[i])
 		i++;
-	}
 	return (i);
 }
-/*
-int		main(void)
-{
-	int len;
-	char	*str = "Test!";
-
-	len = ft_strlen(str);
-	printf("Length of str: %s, is %d\n", str, len);
-}
-*/
