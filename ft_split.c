@@ -6,7 +6,7 @@
 /*   By: jcolyer <jcolyer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 14:21:47 by jcolyer           #+#    #+#             */
-/*   Updated: 2021/11/10 14:44:36 by jcolyer          ###   ########.fr       */
+/*   Updated: 2021/12/06 14:19:07 by jcolyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static char	**ft_alloc_split(char const *s, char c)
 			total++;
 		i++;
 	}
-	split = (char**)malloc(sizeof(s) * (total + 2));
+	split = (char **)malloc(sizeof(s) * (total + 2));
 	if (!split)
 		return (NULL);
 	return (split);
@@ -46,9 +46,10 @@ void	*ft_free_all_split_alloc(char **split, size_t elts)
 	return (NULL);
 }
 
-static void	*ft_split_range(char **split, char const *s, t_split_next *st, t_split_next *lt)
+static void	*ft_split_range(char **split, char const *s,
+		t_split_next *st, t_split_next *lt)
 {
-	split[lt->length] = ft-substr(s, st->start, st->length);
+	split[lt->length] = ft_substr(s, st->start, st->length);
 	if (!split[lt->length])
 		return (ft_free_all_split_alloc(split, lt->length));
 	lt->length++;
@@ -78,7 +79,7 @@ static void	*ft_split_by_char(char **split, char const *s, char c)
 	}
 	st.start = lt.start;
 	st.length = (i - lt.start);
-	if	(i > lt.start && i > 0 && !ft_split_range(split, s, &st, &lt))
+	if (i > lt.start && i > 0 && !ft_split_range(split, s, &st, &lt))
 		return (NULL);
 	split[lt.length] = 0;
 	return (split);
@@ -86,11 +87,11 @@ static void	*ft_split_by_char(char **split, char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **split;
+	char	**split;
 
-	if (!(split = ft_alloc_split(s, c))
-			return (NULL);
+	if (!split == ft_alloc_split(s, c))
+		return (NULL);
 	if (!ft_split_by_char(split, s, c))
-			return (NULL);
+		return (NULL);
 	return (split);
 }

@@ -6,7 +6,7 @@
 /*   By: jcolyer <jcolyer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:27:33 by jcolyer           #+#    #+#             */
-/*   Updated: 2021/11/10 16:45:58 by jcolyer          ###   ########.fr       */
+/*   Updated: 2021/12/06 13:59:02 by jcolyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	size_t	i;
 
-	if (!(str = ft_strdup(s)))
+	if (!(str == ft_strdup(s)))
 		return (NULL);
 	i = 0;
 	while (str[i])

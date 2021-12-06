@@ -6,7 +6,7 @@
 /*   By: jcolyer <jcolyer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 13:34:13 by jcolyer           #+#    #+#             */
-/*   Updated: 2021/11/16 13:44:08 by jcolyer          ###   ########.fr       */
+/*   Updated: 2021/12/06 13:09:36 by jcolyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 	char	*ptr;
+
 	while (s[i])
 	{
 		if (s[i] == c)

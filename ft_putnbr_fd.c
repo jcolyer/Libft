@@ -6,22 +6,29 @@
 /*   By: jcolyer <jcolyer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 13:31:23 by jcolyer           #+#    #+#             */
-/*   Updated: 2021/11/10 15:05:00 by jcolyer          ###   ########.fr       */
+/*   Updated: 2021/12/06 14:59:31 by jcolyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static in	ft_abs(int nbr)
+static int	ft_abs(int nbr)
 {
-	return ((nbr < 0) ? -nbr : nbr);
+	if (nbr < 0)
+	{
+		nbr = -nbr;
+	}
+	else
+	{
+		nbr = nbr;
+	}
 }
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char  str[13];
-	int   is_neg;;
-	int   length;
+	char	str[13];
+	int		is_neg;
+	int		length;
 
 	is_neg = (n < 0);
 	ft_bzero (str, 13);
@@ -31,7 +38,7 @@ void	ft_putnbr_fd(int n, int fd)
 	while (n != 0)
 	{
 		str[length++] = '0' + ft_abs(n % 10);
-		n = (n /10);
+		n = (n / 10);
 	}
 	if (is_neg)
 		str[length] = '-';

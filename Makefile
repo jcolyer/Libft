@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcolyer <jcolyer@student.42.fr>                     +#+  +:+       +#+         #
+#    By: jcolyer <jcolyer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 13:32:15 by jcolyer           #+#    #+#              #
-#    Updated: 2021/11/10 14:16:15 by jcolyer          ###   ########.fr        #
+#    Updated: 2021/12/06 15:30:32 by jcolyer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,10 +57,10 @@ NAME = libft.a
 
 OBJS_DIR = objs/
 OBJS = $(SRCS:.c=.o)
-OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
+OBJECTS_PREFIXED = ($(addprefix) $(OBJS_DIR), $(OBJS))
 
 OBJSB = $(SRCSB: .c=.o)
-OBJECTS_PREFIXED = ( $(addprefix $(OBJS_DIR, $(OBJSB))
+OBJECTS_PREFIXED = $(addprefix) $(OBJS_DIR, $(OBJSB))
 CC = clang
 
 CC_FLAGS = -Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: jcolyer <jcolyer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 12:44:06 by jcolyer           #+#    #+#             */
-/*   Updated: 2021/11/16 12:54:19 by jcolyer          ###   ########.fr       */
+/*   Updated: 2021/12/06 13:04:43 by jcolyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)
